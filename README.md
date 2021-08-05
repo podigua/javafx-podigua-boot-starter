@@ -8,7 +8,7 @@
 
 ```xml
 <dependency>
-    <groupId>com.github.podigua</groupId>
+    <groupId>io.github.podigua</groupId>
     <artifactId>javafx-podigua-boot-starter</artifactId>
     <version>1.0.0</version>
 </dependency>
