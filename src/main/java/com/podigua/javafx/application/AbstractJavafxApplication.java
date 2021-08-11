@@ -16,6 +16,7 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.util.Assert;
 
 import java.awt.*;
+import java.sql.Statement;
 import java.util.concurrent.CompletableFuture;
 
 /**
@@ -116,7 +117,7 @@ public abstract class AbstractJavafxApplication extends Application implements A
     }
 
     @Override
-    public void stop(){
+    public void stop() {
         Platform.exit();
         state.getContext().close();
         System.exit(0);
@@ -129,4 +130,12 @@ public abstract class AbstractJavafxApplication extends Application implements A
      */
     protected abstract void ready(Stage stage);
 
+    /**
+     * 获取状态
+     *
+     * @return
+     */
+    protected State getState() {
+        return state;
+    }
 }

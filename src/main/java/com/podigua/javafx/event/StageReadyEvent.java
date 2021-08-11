@@ -4,18 +4,19 @@ import javafx.stage.Stage;
 import org.springframework.context.ApplicationEvent;
 
 /**
+ * Stage准备完成事件
+ *
  * @author: podigua
  * @create: 2021-08-02 11:25
  **/
 public class StageReadyEvent extends ApplicationEvent {
-
 
     public StageReadyEvent(Stage stage) {
         super(stage);
     }
 
     /**
-     * 获取场景图
+     * 获取Stage
      *
      * @return
      */
