@@ -1,6 +1,5 @@
 package com.podigua.javafx;
 
-import com.podigua.javafx.application.AbstractJavafxApplication;
 import javafx.application.HostServices;
 import javafx.stage.Stage;
 import lombok.Getter;
