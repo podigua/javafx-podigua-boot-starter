@@ -12,27 +12,26 @@ import java.io.IOException;
 
 /**
  * @author: podigua
- * @create: 2021-08-02 11:27
  **/
 public interface SplashScreen {
     /**
      * 是否显示
      *
-     * @return
+     * @return 是否显示
      */
     boolean visible();
 
     /**
      * 图片路径
      *
-     * @return
+     * @return 图片路径
      */
     String getImagePath();
 
     /**
      * 获取图片
      *
-     * @return
+     * @return 组件
      */
     default Parent getParent() {
         try {

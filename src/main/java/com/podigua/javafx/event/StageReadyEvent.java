@@ -7,7 +7,6 @@ import org.springframework.context.ApplicationEvent;
  * Stage准备完成事件
  *
  * @author: podigua
- * @create: 2021-08-02 11:25
  **/
 public class StageReadyEvent extends ApplicationEvent {
 
@@ -18,7 +17,7 @@ public class StageReadyEvent extends ApplicationEvent {
     /**
      * 获取Stage
      *
-     * @return
+     * @return 舞台
      */
     public Stage getStage() {
         return (Stage) getSource();

@@ -4,7 +4,6 @@ import javafx.scene.Parent;
 
 /**
  * @author: podigua
- * @create: 2021-08-02 11:32
  **/
 public interface FxmlService {
     /**

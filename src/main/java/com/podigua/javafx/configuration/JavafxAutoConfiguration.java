@@ -11,7 +11,6 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * @author: podigua
- * @create: 2021-08-02 11:34
  **/
 @Configuration
 @ConditionalOnProperty(name = "podigua.javafx.enabled", matchIfMissing = true)

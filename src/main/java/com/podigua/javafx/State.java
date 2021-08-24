@@ -11,7 +11,6 @@ import java.awt.*;
 
 /**
  * @author: podigua
- * @create: 2021-08-02 10:39
  **/
 @Getter
 @Setter
@@ -41,7 +40,7 @@ public class State {
     /**
      * 获取状态实例
      *
-     * @return
+     * @return 当前状态
      */
     public static State getInstance() {
         return instance;
