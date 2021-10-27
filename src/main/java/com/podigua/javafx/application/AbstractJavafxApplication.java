@@ -2,6 +2,8 @@ package com.podigua.javafx.application;
 
 import com.podigua.javafx.State;
 import com.podigua.javafx.event.StageReadyEvent;
+import com.podigua.javafx.support.BeanHomeFactory;
+import com.podigua.javafx.support.FxmlService;
 import com.podigua.javafx.support.SplashScreen;
 import com.podigua.javafx.support.impl.DefaultSplashScreen;
 import javafx.application.Application;
@@ -11,6 +13,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import org.springframework.beans.factory.BeanFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.ApplicationListener;
 import org.springframework.util.Assert;

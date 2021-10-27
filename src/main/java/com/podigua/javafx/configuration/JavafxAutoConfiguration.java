@@ -1,5 +1,6 @@
 package com.podigua.javafx.configuration;
 
+import com.podigua.javafx.support.BeanHomeFactory;
 import com.podigua.javafx.support.FxmlService;
 import com.podigua.javafx.support.impl.FxmlServiceImpl;
 import lombok.extern.slf4j.Slf4j;
@@ -20,5 +21,11 @@ public class JavafxAutoConfiguration {
     @ConditionalOnMissingBean
     public FxmlService fxmlService(ApplicationContext applicationContext) {
         return new FxmlServiceImpl(applicationContext);
+    }
+
+    @Bean
+    @ConditionalOnMissingBean
+    public BeanHomeFactory beanHomeFactory() {
+        return new BeanHomeFactory();
     }
 }
