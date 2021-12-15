@@ -149,7 +149,7 @@ public class TestApplication extends AbstractJavafxApplication {
 }
 ```
 
-## 国际化
+# 国际化
 实现接口`com.podigua.javafx.support.ResourceBundleLoader`,并设置为`spring`的`bean`
 国际化配置文件放置在`resource`路径下,名称为`messages.properties`,`messages_zh_CN.properties`,其他语言自行配置
 ```java
