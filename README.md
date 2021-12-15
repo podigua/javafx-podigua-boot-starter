@@ -93,7 +93,7 @@ public class TestApplication extends AbstractJavafxApplication {
 
 ```java
 
-@Service
+@FXMLController
 public class IndexController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -157,7 +157,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ResourceBundle;
 
-@Service
+@FXMLController
 public class MessageResourceBundleLoader implements ResourceBundleLoader {
     @Override
     public ResourceBundle get() {
