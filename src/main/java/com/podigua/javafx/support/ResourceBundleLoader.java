@@ -9,7 +9,7 @@ public interface ResourceBundleLoader {
     /**
      * 加载 国际化配置
      *
-     * @return
+     * @return 国际化
      */
     ResourceBundle get();
 }

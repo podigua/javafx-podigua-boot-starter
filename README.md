@@ -10,7 +10,7 @@
 <dependency>
     <groupId>io.github.podigua</groupId>
     <artifactId>javafx-podigua-boot-starter</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
 </dependency>
 ```
 
@@ -89,7 +89,7 @@ public class TestApplication extends AbstractJavafxApplication {
 ```
 
 ### controller
-`controller` 需要添加`@Service`使`controller`注册为`spring`的`bean`
+`controller` 需要添加`@FXMLController`使`controller`注册为`spring`的`bean`
 
 ```java
 
