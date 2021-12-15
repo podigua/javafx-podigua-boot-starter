@@ -2,8 +2,7 @@ package com.podigua.javafx.application;
 
 import com.podigua.javafx.State;
 import com.podigua.javafx.event.StageReadyEvent;
-import com.podigua.javafx.support.BeanHomeFactory;
-import com.podigua.javafx.support.FxmlService;
+import com.podigua.javafx.support.ResourceBundleLoader;
 import com.podigua.javafx.support.SplashScreen;
 import com.podigua.javafx.support.impl.DefaultSplashScreen;
 import javafx.application.Application;
@@ -13,13 +12,11 @@ import javafx.scene.control.Alert;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import org.springframework.beans.factory.BeanFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.ApplicationListener;
 import org.springframework.util.Assert;
 
 import java.awt.*;
-import java.sql.Statement;
 import java.util.concurrent.CompletableFuture;
 
 /**
@@ -50,6 +47,7 @@ public abstract class AbstractJavafxApplication extends Application implements A
                 );
             } else {
                 state.setContext(context);
+                state.setResourceBundle(context.getBean(ResourceBundleLoader.class).get());
             }
         }).thenAcceptBothAsync(screenCompletableFuture, ((context, runnable) ->
                 Platform.runLater(runnable)
@@ -94,7 +92,7 @@ public abstract class AbstractJavafxApplication extends Application implements A
      * 使用默认动画启动
      *
      * @param appClass appClass
-     * @param args 参数
+     * @param args     参数
      */
     public static void launch(Class<? extends Application> appClass, String... args) {
         launch(appClass, new DefaultSplashScreen(), args);
@@ -104,8 +102,8 @@ public abstract class AbstractJavafxApplication extends Application implements A
      * 自定义方法启用
      *
      * @param appClass appClass
-     * @param screen 动画
-     * @param args 参数
+     * @param screen   动画
+     * @param args     参数
      */
     public static void launch(Class<? extends Application> appClass, SplashScreen screen, String... args) {
         Assert.notNull(screen, "splash screen is required");
@@ -129,7 +127,7 @@ public abstract class AbstractJavafxApplication extends Application implements A
     /**
      * 启动方法
      *
-     * @param stage  舞台
+     * @param stage 舞台
      */
     protected abstract void ready(Stage stage);
 

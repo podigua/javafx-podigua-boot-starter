@@ -10,7 +10,7 @@
 <dependency>
     <groupId>io.github.podigua</groupId>
     <artifactId>javafx-podigua-boot-starter</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
 </dependency>
 ```
 
@@ -145,6 +145,23 @@ public class TestApplication extends AbstractJavafxApplication {
         Parent parent = fxmlService.load("fxml/index.fxml");
         stage.setScene(new Scene(parent, 1000, 750));
         stage.show();
+    }
+}
+```
+
+## 国际化
+实现接口`com.podigua.javafx.support.ResourceBundleLoader`,并设置为`spring`的`bean`
+国际化配置文件放置在`resource`路径下,名称为`messages.properties`,`messages_zh_CN.properties`,启用语言自行配置
+```java
+import org.springframework.stereotype.Service;
+
+import java.util.ResourceBundle;
+
+@Service
+public class MessageResourceBundleLoader implements ResourceBundleLoader {
+    @Override
+    public ResourceBundle get() {
+        return ResourceBundle.getBundle("messages");
     }
 }
 ```

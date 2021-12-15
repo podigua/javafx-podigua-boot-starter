@@ -7,6 +7,7 @@ import lombok.Setter;
 import org.springframework.context.ConfigurableApplicationContext;
 
 import java.awt.*;
+import java.util.ResourceBundle;
 
 /**
  * @author: podigua
@@ -35,6 +36,10 @@ public class State {
      * spring 上下文
      */
     private ConfigurableApplicationContext context;
+    /**
+     * 国际化
+     */
+    private ResourceBundle resourceBundle;
 
     /**
      * 获取状态实例
